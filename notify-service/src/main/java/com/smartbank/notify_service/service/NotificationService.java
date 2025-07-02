@@ -22,6 +22,7 @@ public class NotificationService {
         mailMessage.setTo(notificationRequestDto.getTo());
         mailMessage.setText(notificationRequestDto.getMessage());
         mailMessage.setSubject("Account Created Successfully....!");
+        // Send Email
 
         javaMailSender.send(mailMessage);
         return "Mail Send Successfully";

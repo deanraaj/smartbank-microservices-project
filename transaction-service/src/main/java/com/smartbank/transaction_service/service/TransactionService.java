@@ -10,6 +10,7 @@ import com.smartbank.transaction_service.proxy.AccountServiceClient;
 import com.smartbank.transaction_service.proxy.NotificationServiceClient;
 import com.smartbank.transaction_service.proxy.UserServiceClient;
 import com.smartbank.transaction_service.repository.TransactionRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,7 @@ public class TransactionService {
     @Autowired
     private NotificationServiceClient notifyClient;
 
+    @Transactional
     public Transactions createTransaction(TransactionDto transactionDto) {
         // Create Transactions object from given transactionDto
         Transactions transactions = new Transactions();
@@ -70,4 +72,6 @@ public class TransactionService {
         return transactions;
 
     }
+
+
 }

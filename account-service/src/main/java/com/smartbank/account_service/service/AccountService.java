@@ -42,7 +42,9 @@ public class AccountService {
 
         NotificationRequestDto notificationRequestDto = new NotificationRequestDto();
         notificationRequestDto.setTo(userDto.getEmail());
-        notificationRequestDto.setMessage("Account is created successfully...! from Account Service");
+        notificationRequestDto.setMessage("Congratulations, Your account is created successfully in Bank. \n Your Account Details : \n"
+                + "Account Name : " + userDto.getName() + "\n Account Number: " + savedAccount.getId());
+
 
         //
         notifyServiceProxy.sendNotification(notificationRequestDto);
