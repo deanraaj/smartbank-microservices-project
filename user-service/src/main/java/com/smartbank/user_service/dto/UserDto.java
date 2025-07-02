@@ -3,7 +3,7 @@ package com.smartbank.user_service.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+// Made change in the Central code base. NAGARAJU DOLA
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
